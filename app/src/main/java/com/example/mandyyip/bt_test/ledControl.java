@@ -134,7 +134,7 @@ public class ledControl extends AppCompatActivity {
         {
             try
             {
-                bt_socket.getOutputStream().write("TO".toString().getBytes());
+                bt_socket.getOutputStream().write("1234567890".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -173,7 +173,7 @@ public class ledControl extends AppCompatActivity {
             public void onClick(View v)
             {
                 turnOnLed(); //method to turn on
-                Toast.makeText(getApplicationContext(), "Turning on...", Toast.LENGTH_LONG ).show();
+                Toast.makeText(getApplicationContext(), "Turning on...", Toast.LENGTH_SHORT ).show();
             }
         });
 
@@ -183,7 +183,7 @@ public class ledControl extends AppCompatActivity {
             public void onClick(View v)
             {
                 turnOffLed(); //method to turn off
-                Toast.makeText(getApplicationContext(), "Turning off...", Toast.LENGTH_LONG ).show();
+                Toast.makeText(getApplicationContext(), "Turning off...", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -193,7 +193,7 @@ public class ledControl extends AppCompatActivity {
             public void onClick(View v)
             {
                 Disconnect(); //close connection
-                Toast.makeText(getApplicationContext(), "Disconnecting...", Toast.LENGTH_LONG ).show();
+                Toast.makeText(getApplicationContext(), "Disconnecting...", Toast.LENGTH_SHORT ).show();
             }
         });
 
