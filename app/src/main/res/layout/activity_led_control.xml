@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mandyyip.bt_test.ledControl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_led"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LED CONTROL"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btn_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ON"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"/>
+
+        <Button
+            android:id="@+id/btn_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OFF"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_on"
+            android:layout_marginTop="65dp"/>
+
+        <Button
+            android:id="@+id/btn_dconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DISCONNECT"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_off"
+            android:layout_marginTop="65dp"/>
+
+        <TextView
+            android:id="@+id/txt_bright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BRIGHTNESS:"
+            android:layout_below="@id/btn_dconnect"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/txt_lumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/A"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_dconnect"
+            android:layout_marginTop="20dp"/>
+
+        <SeekBar
+            android:id="@+id/skbar"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txt_bright"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
