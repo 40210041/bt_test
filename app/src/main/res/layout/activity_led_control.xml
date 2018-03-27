@@ -9,66 +9,155 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtValueTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/values"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/txtRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtValueTitle"
+            android:text="@string/red"
+            android:textSize="20sp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/editRed"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp"
+            android:textSize="20sp"
+            android:layout_below="@id/txtValueTitle"
+            android:layout_marginTop="10dp"
+            android:hint="@string/hint"
+            android:inputType="number"/>
+        <TextView
+            android:id="@+id/txtGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRed"
+            android:text="@string/green"
+            android:textSize="20sp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/editGreen"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp"
+            android:textSize="20sp"
+            android:layout_below="@id/txtRed"
+            android:layout_marginTop="10dp"
+            android:hint="@string/hint"
+            android:inputType="number"/>
+        <TextView
+            android:id="@+id/txtBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtGreen"
+            android:text="@string/blue"
+            android:textSize="20sp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/editBlue"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp"
+            android:textSize="20sp"
+            android:layout_below="@id/txtGreen"
+            android:layout_marginTop="10dp"
+            android:hint="@string/hint"
+            android:inputType="number"/>
 
         <TextView
-            android:id="@+id/txt_led"
+            android:id="@+id/txtWhiteOption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LED CONTROL"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"/>
-
-        <Button
-            android:id="@+id/btn_on"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ON"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="65dp"/>
-
-        <Button
-            android:id="@+id/btn_off"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OFF"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/btn_on"
-            android:layout_marginTop="65dp"/>
-
-        <Button
-            android:id="@+id/btn_dconnect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DISCONNECT"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/btn_off"
-            android:layout_marginTop="65dp"/>
-
-        <TextView
-            android:id="@+id/txt_bright"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BRIGHTNESS:"
-            android:layout_below="@id/btn_dconnect"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"/>
-
-        <TextView
-            android:id="@+id/txt_lumn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="N/A"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/btn_dconnect"
+            android:layout_below="@id/txtBlue"
+            android:width="51dp"
+            android:text="@string/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="70dp"
             android:layout_marginTop="20dp"/>
 
-        <SeekBar
-            android:id="@+id/skbar"
-            android:layout_width="350dp"
+        <CheckBox
+            android:id="@+id/chkWhite"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/txtBlue"
+            android:layout_toRightOf="@id/txtWhiteOption"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="90dp"
+            android:checked="false"/>
+
+        <TextView
+            android:id="@+id/txtOriginal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtWhiteOption"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/txt_bright"
             android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/btn_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ON"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_dconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DISCONNECT"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtWhiteOption"
+            android:layout_marginTop="100dp">
+            <TextView
+                android:id="@+id/txt_bright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BRIGHTNESS:"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/txt_lumn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+
+            <SeekBar
+                android:id="@+id/skbar"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/txt_bright"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
